@@ -19,5 +19,6 @@ setuptools.setup(
         'Programming Language :: Python :: 3',
     ],
     keywords='python zip bz2 gzip',
+    package_dir={'': 'src'},
     py_modules=['pyanyzip'],
 )
