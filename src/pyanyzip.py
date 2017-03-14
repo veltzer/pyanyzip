@@ -1,4 +1,6 @@
 import builtins
+import bz2
+
 from pypipegzip import pypipegzip
 import lzma
 
@@ -42,4 +44,4 @@ def open(name: str, mode: str=None, method: str='magic', type: str=None):
     if type == "xz":
         return lzma.open(filename=name, mode=mode)
     if type == "bzip2":
-        return bzip2.open()
+        return bz2.open(filename=name, mode=mode)
