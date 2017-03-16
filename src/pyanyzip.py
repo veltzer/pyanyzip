@@ -27,21 +27,22 @@ def _get_type(name, method):
             return 'xz'
         return 'plain'
     if method == 'magic':
-        pass
+        raise ValueError("magic is still not implemented")
 
 
 # noinspection PyShadowingBuiltins
-def open(name: str, mode: str=None, method: str='magic', type: str=None):
+def open(name: str, mode: str=None, method: str='suffix', type: str=None):
     assert method in methods
     if type is None:
         type = _get_type(name, method)
     else:
         assert type in types
     if type == 'plain':
-        return builtins.open(name=name, mode=mode)
+        return builtins.open(name, mode=mode)
     if type == "gzip":
         return pypipegzip.open(filename=name, mode=mode)
     if type == "xz":
         return lzma.open(filename=name, mode=mode)
     if type == "bzip2":
         return bz2.open(filename=name, mode=mode)
+    raise ValueError("You should not be here")
