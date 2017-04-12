@@ -6,7 +6,7 @@ if not sys.version_info[0] == 3:
 
 setuptools.setup(
     name='pyanyzip',
-    version='0.0.4',
+    version='0.0.5',
     description='pyanyzip is a module to help with dealing with compressed files transparently',
     long_description='pyanyzip is a module to help with dealing with compressed files transparently',
     url='https://veltzer.github.io/pyanyzip',
@@ -21,4 +21,7 @@ setuptools.setup(
     keywords='python zip bz2 gzip',
     package_dir={'': 'src'},
     py_modules=['pyanyzip'],
+    install_requires=[
+        'pypipegzip',  # for opening zipped files
+    ],
 )
