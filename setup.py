@@ -1,12 +1,8 @@
 import setuptools
 
-import sys
-if not sys.version_info[0] == 3:
-    sys.exit("Sorry, only python version 3 is supported")
-
 setuptools.setup(
     name='pyanyzip',
-    version='0.0.6',
+    version='0.0.7',
     description='pyanyzip is a module to help with dealing with compressed files transparently',
     long_description='pyanyzip is a module to help with dealing with compressed files transparently',
     url='https://veltzer.github.io/pyanyzip',
@@ -23,5 +19,7 @@ setuptools.setup(
     py_modules=['pyanyzip'],
     install_requires=[
         'pypipegzip',  # for opening zipped files
+        'pylzma',  # for working with .xz files
+        'typing',  # for types
     ],
 )

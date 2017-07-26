@@ -1,8 +1,12 @@
-import builtins
-import bz2
+# python 3
+# import bz2
+from typing import Any
 
 from pypipegzip import pypipegzip
-import lzma
+# python 3
+# import lzma
+# python 2
+# import pylzma
 
 methods = {
     "magic",
@@ -30,19 +34,31 @@ def _get_type(name, method):
         raise ValueError("magic is still not implemented")
 
 
+real_open = open
+
+
 # noinspection PyShadowingBuiltins
-def open(name: str, mode: str=None, method: str='suffix', type: str=None):
+def open(name, mode=None, method='suffix', type=None):
+    # type: (str, str, str, str) -> Any
+    global real_open
     assert method in methods
     if type is None:
         type = _get_type(name, method)
     else:
         assert type in types
     if type == 'plain':
-        return builtins.open(name, mode=mode)
+        return real_open(name, mode=mode)
     if type == "gzip":
         return pypipegzip.open(filename=name, mode=mode)
     if type == "xz":
-        return lzma.open(filename=name, mode=mode)
+        # python3
+        # return lzma.open(filename=name, mode=mode)
+        # python2
+        # return pylzma.open(filename=name, mode=mode)
+        raise ValueError("xz not supported")
     if type == "bzip2":
-        return bz2.open(filename=name, mode=mode)
+        # python3
+        # return bz2.open(filename=name, mode=mode)
+        # python2
+        raise ValueError("bzip2 not supported")
     raise ValueError("You should not be here")

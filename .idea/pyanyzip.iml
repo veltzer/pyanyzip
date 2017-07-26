@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/data" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 2.7.13 virtualenv at ~/.virtualenvs/pyanyzip" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">

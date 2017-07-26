@@ -10,7 +10,10 @@ class TestAll(unittest.TestCase):
         pass
 
     def testOpenNotExists(self):
-        self.assertRaises(FileNotFoundError, pyanyzip.open, name="data/doesnt_exist.txt", mode="rt")
+        # python3
+        # self.assertRaises(FileNotFoundError, pyanyzip.open, name="data/doesnt_exist.txt", mode="rt")
+        # python2
+        self.assertRaises(IOError, pyanyzip.open, name="data/doesnt_exist.txt", mode="rt")
 
     def testOpenTextFile(self):
         print(os.getcwd())
