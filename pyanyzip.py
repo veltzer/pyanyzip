@@ -1,12 +1,15 @@
-# python 3
-# import bz2
 from typing import Any
 
+import sys
 from pypipegzip import pypipegzip
-# python 3
-# import lzma
-# python 2
-# import pylzma
+
+
+def is_2():
+    return sys.version_info[0] == 2
+
+
+def is_3():
+    return sys.version_info[0] == 3
 
 methods = {
     "magic",
@@ -51,14 +54,15 @@ def open(name, mode=None, method='suffix', type=None):
     if type == "gzip":
         return pypipegzip.open(filename=name, mode=mode)
     if type == "xz":
-        # python3
-        # return lzma.open(filename=name, mode=mode)
-        # python2
-        # return pylzma.open(filename=name, mode=mode)
-        raise ValueError("xz not supported")
+        if is_3():
+            import lzma
+            return lzma.open(filename=name, mode=mode)
+        else:
+            raise ValueError("xz not supported")
     if type == "bzip2":
-        # python3
-        # return bz2.open(filename=name, mode=mode)
-        # python2
-        raise ValueError("bzip2 not supported")
+        if is_3():
+            import bz2
+            return bz2.open(filename=name, mode=mode)
+        else:
+            raise ValueError("bzip2 not supported")
     raise ValueError("You should not be here")
