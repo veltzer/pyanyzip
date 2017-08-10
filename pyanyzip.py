@@ -1,3 +1,4 @@
+import codecs
 from typing import Any
 
 import sys
@@ -22,6 +23,9 @@ types = {
     "bz2",
     "xz",
 }
+
+
+DEFAULT_ENCODING = 'utf-8'
 
 
 def _get_type(name, method):
@@ -50,7 +54,11 @@ def open(name, mode=None, method='suffix', type=None):
     else:
         assert type in types
     if type == 'plain':
-        return real_open(name, mode=mode)
+        if is_2():
+            handle = real_open(name, mode=mode)
+            return codecs.getreader(encoding=DEFAULT_ENCODING)(handle)
+        else:
+            return real_open(name, mode=mode)
     if type == "gzip":
         return pypipegzip.open(filename=name, mode=mode)
     if type == "xz":
