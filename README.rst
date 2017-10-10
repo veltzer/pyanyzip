@@ -1,1 +1,2 @@
-This is to make 'python setup.py sdist' happy...
+# pyanyzip
+pyanyzip is a module to help with dealing with all compressions transparently.
