@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='pyanyzip',
-    version='0.0.11',
+    version='0.0.12',
     description='pyanyzip is a module to help with dealing with compressed files transparently',
     long_description='pyanyzip is a module to help with dealing with compressed files transparently',
     url='https://github.com/veltzer/pyanyzip',
