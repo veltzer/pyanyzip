@@ -1,7 +1,6 @@
-import codecs
+import sys
 from typing import Any, Union
 
-import sys
 from pypipegzip import pypipegzip
 
 
