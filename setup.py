@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='pyanyzip',
-    version='0.0.13',
+    version='0.0.14',
     description='pyanyzip is a module to help with dealing with compressed files transparently',
     long_description='pyanyzip is a module to help with dealing with compressed files transparently',
     url='https://github.com/veltzer/pyanyzip',
@@ -19,7 +19,7 @@ setuptools.setup(
         'Programming Language :: Python :: 3',
     ],
     keywords='python zip bz2 gzip',
-    py_modules=['pyanyzip'],
+    packages=setuptools.find_packages(),
     install_requires=[
         'pypipegzip',  # for opening zipped files
         'pylzma',  # for working with .xz files
