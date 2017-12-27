@@ -5,7 +5,7 @@ setuptools.setup(
     version='0.0.15',
     description='pyanyzip is a module to help with dealing with compressed files transparently',
     long_description='pyanyzip is a module to help with dealing with compressed files transparently',
-    url='https://github.com/veltzer/pyanyzip',
+    url='https://veltzer.github.io/pyanyzip',
     download_url='https://github.com/veltzer/pyanyzip',
     author='Mark Veltzer',
     author_email='mark.veltzer@gmail.com',
