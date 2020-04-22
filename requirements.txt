@@ -1,6 +1,5 @@
 # production
 pypipegzip
 pylzma
-typing
 # development tools
 pypitools
