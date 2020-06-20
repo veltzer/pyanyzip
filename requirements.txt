@@ -1,5 +1,14 @@
-# production
+# THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
+# production requirements
 pypipegzip
 pylzma
-# development tools
+typing
+# dev requirements
+pyclassifiers
 pypitools
+pydmt
+Sphinx
+# test requirements
+pylint
+pytest
+pyflakes
