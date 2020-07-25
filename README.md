@@ -20,3 +20,5 @@
 pyanyzip is a module to help with dealing with compressed files transparently
 
 project website: <https://veltzer.github.io/pyanyzip>
+
+
