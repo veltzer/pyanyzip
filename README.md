@@ -16,6 +16,8 @@
 ![Downloads](https://pepy.tech/badge/pyanyzip/month)
 ![Downloads](https://pepy.tech/badge/pyanyzip/week)
 
+[![Known Vulnerabilities](https://snyk.io/test/github/veltzer/pyanyzip/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/veltzer/pyanyzip?targetFile=requirements.txt)
+
 
 
 pyanyzip is a module to help with dealing with compressed files transparently
