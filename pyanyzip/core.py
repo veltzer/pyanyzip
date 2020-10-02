@@ -44,7 +44,7 @@ def openzip(name, mode=None, method='suffix', zip_type=None, newline=None, encod
     if zip_type == 'plain':
         return io.open(name, mode=mode, newline=newline, encoding=encoding)
     if type == "gzip":
-        return pypipegzip.open(filename=name, mode=mode, newline=newline, encoding=encoding)
+        return pypipegzip.zipopen(filename=name, mode=mode, newline=newline, encoding=encoding)
     if type == "xz":
         return lzma.open(filename=name, mode=mode, newline=newline, encoding=encoding)
     if type == "bzip2":
