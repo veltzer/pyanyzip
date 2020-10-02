@@ -1,15 +1,10 @@
-import sys
 from typing import Any, Union
 
+import io
+import lzma
+import bz2
+
 from pypipegzip import pypipegzip
-
-
-def is_2():
-    return sys.version_info[0] == 2
-
-
-def is_3():
-    return sys.version_info[0] == 3
 
 
 methods = {
@@ -17,7 +12,7 @@ methods = {
     "suffix",
 }
 
-types = {
+zip_types = {
     "plain",
     "gzip",
     "bz2",
@@ -36,35 +31,22 @@ def _get_type(name, method):
         return 'plain'
     if method == 'magic':
         raise ValueError("magic is still not implemented")
+    raise ValueError("method not supported")
 
 
-# noinspection PyShadowingBuiltins
-def open(name, mode=None, method='suffix', type=None, newline=None, encoding='utf-8'):
+def openzip(name, mode=None, method='suffix', zip_type=None, newline=None, encoding='utf-8'):
     # type: (str, str, str, str, Union[str, None], str) -> Any
     assert method in methods
-    if type is None:
-        type = _get_type(name, method)
+    if zip_type is None:
+        zip_type = _get_type(name, method)
     else:
-        assert type in types
-    if type == 'plain':
-        if is_2():
-            import io
-            return io.open(name, mode=mode, newline=newline, encoding=encoding)
-        else:
-            import io
-            return io.open(name, mode=mode, newline=newline, encoding=encoding)
+        assert zip_type in zip_types
+    if zip_type == 'plain':
+        return io.open(name, mode=mode, newline=newline, encoding=encoding)
     if type == "gzip":
         return pypipegzip.open(filename=name, mode=mode, newline=newline, encoding=encoding)
     if type == "xz":
-        if is_3():
-            import lzma
-            return lzma.open(filename=name, mode=mode, newline=newline, encoding=encoding)
-        else:
-            raise ValueError("xz not supported")
+        return lzma.open(filename=name, mode=mode, newline=newline, encoding=encoding)
     if type == "bzip2":
-        if is_3():
-            import bz2
-            return bz2.open(filename=name, mode=mode, newline=newline, encoding=encoding)
-        else:
-            raise ValueError("bzip2 not supported")
+        return bz2.open(filename=name, mode=mode, newline=newline, encoding=encoding)
     raise ValueError("You should not be here")

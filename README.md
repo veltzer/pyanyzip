@@ -19,6 +19,9 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/veltzer/pyanyzip/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/veltzer/pyanyzip?targetFile=requirements.txt)
 
 
+Actions
+
+![build](https://github.com/veltzer/pyanyzip/workflows/build/badge.svg)
 
 pyanyzip is a module to help with dealing with compressed files transparently
 
