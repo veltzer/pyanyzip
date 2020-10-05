@@ -25,7 +25,7 @@ Actions
 
 pyanyzip is a module to help with dealing with compressed files transparently
 
-project website: <https://veltzer.github.io/pyanyzip>
+project website: https://veltzer.github.io/pyanyzip
 
 chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
 
