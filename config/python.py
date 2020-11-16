@@ -20,6 +20,7 @@ test_requires = [
     'pytest-cov',  # for testing
     'pyflakes',  # for testing
     'flake8',  # for linting
+    'pymakehelper',  # for the makefile
 ]
 
 dev_requires = [

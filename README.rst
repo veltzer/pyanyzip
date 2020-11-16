@@ -12,6 +12,6 @@ project website: https://veltzer.github.io/pyanyzip
 
 author: Mark Veltzer
 
-version: 0.0.18
+version: 0.0.19
 
 
