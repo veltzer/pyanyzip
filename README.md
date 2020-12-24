@@ -12,11 +12,6 @@
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/pyanyzip)
 
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
-![Downloads](https://pepy.tech/badge/pyanyzip)
-![Downloads](https://pepy.tech/badge/pyanyzip/month)
-![Downloads](https://pepy.tech/badge/pyanyzip/week)
-
-[![Known Vulnerabilities](https://snyk.io/test/github/veltzer/pyanyzip/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/veltzer/pyanyzip?targetFile=requirements.txt)
 
 
 Actions
