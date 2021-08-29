@@ -1,4 +1,4 @@
-from typing import Any, Union
+from typing import Union
 
 import io
 import lzma
@@ -34,14 +34,15 @@ def _get_type(name, method):
     raise ValueError("method not supported")
 
 
-def openzip(name: str, mode: str=None, method: str='suffix', zip_type: Union[str, None]=None,
-        newline: Union[str, None]=None, encoding: str='utf-8'):
+def openzip(name: str, mode: str = None, method: str = 'suffix', zip_type: Union[str, None] = None,
+            newline: Union[str, None] = None, encoding: str = 'utf-8'):
     assert method in methods
     if zip_type is None:
         zip_type = _get_type(name, method)
     else:
         assert zip_type in zip_types
     if zip_type == 'plain':
+        # pylint: disable=consider-using-with
         return io.open(name, mode=mode, newline=newline, encoding=encoding)
     if type == "gzip":
         return pypipegzip.zipopen(filename=name, mode=mode, newline=newline, encoding=encoding)
