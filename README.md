@@ -14,7 +14,6 @@
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 ![build](https://github.com/veltzer/pyanyzip/workflows/build/badge.svg)
-
 pyanyzip is a module to help with dealing with compressed files transparently
 
 project website: https://veltzer.github.io/pyanyzip
