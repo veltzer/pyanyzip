@@ -35,7 +35,7 @@ def _get_type(name, method):
 
 
 def openzip(name: str, mode: str = None, method: str = 'suffix', zip_type: Union[str, None] = None,
-            newline: Union[str, None] = None, encoding: str = 'utf-8'):
+            newline: Union[str, None] = None):
     assert method in methods
     if zip_type is None:
         zip_type = _get_type(name, method)
@@ -43,11 +43,11 @@ def openzip(name: str, mode: str = None, method: str = 'suffix', zip_type: Union
         assert zip_type in zip_types
     if zip_type == 'plain':
         # pylint: disable=consider-using-with
-        return io.open(name, mode=mode, newline=newline, encoding=encoding)
+        return io.open(name, mode=mode, newline=newline)
     if type == "gzip":
-        return pypipegzip.zipopen(filename=name, mode=mode, newline=newline, encoding=encoding)
+        return pypipegzip.zipopen(filename=name, mode=mode, newline=newline)
     if type == "xz":
-        return lzma.open(filename=name, mode=mode, newline=newline, encoding=encoding)
+        return lzma.open(filename=name, mode=mode, newline=newline)
     if type == "bzip2":
-        return bz2.open(filename=name, mode=mode, newline=newline, encoding=encoding)
+        return bz2.open(filename=name, mode=mode, newline=newline)
     raise ValueError("You should not be here")
