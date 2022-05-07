@@ -33,13 +33,6 @@ setuptools.setup(
     platforms=[
         'python3',
     ],
-    install_requires=[
-        'pypipegzip',
-        'pylzma',
-        'typing',
-    ],
-    extras_require={
-    },
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
@@ -53,7 +46,5 @@ setuptools.setup(
     ],
     data_files=[
     ],
-    entry_points={"console_scripts": [
-    ]},
     python_requires=">=3.9",
 )

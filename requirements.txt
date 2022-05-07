@@ -1,8 +1,4 @@
 # THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
-# production requirements
-pypipegzip
-pylzma
-typing
 # dev requirements
 pyclassifiers
 pypitools
