@@ -34,7 +34,7 @@ def _get_type(name, method):
     raise ValueError("method not supported")
 
 
-def openzip(name: str, mode: str = None, method: str = 'suffix', zip_type: Union[str, None] = None,
+def openzip(name: str, mode: str, method: str = 'suffix', zip_type: Union[str, None] = None,
             newline: Union[str, None] = None):
     assert method in methods
     if zip_type is None:
