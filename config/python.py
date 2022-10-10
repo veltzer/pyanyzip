@@ -8,6 +8,7 @@ install_requires = [
 ]
 make_requires = [
     "pymakehelper",
+    "pydmt",
 ]
 test_requires = [
     "pyclassifiers",
