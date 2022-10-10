@@ -6,6 +6,7 @@ typing
 # dev requirements
 pypitools
 # test requirements
+pyclassifiers
 pylint
 pytest
 pytest-cov

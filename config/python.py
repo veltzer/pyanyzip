@@ -1,9 +1,6 @@
 dev_requires = [
     "pypitools",
 ]
-config_requires = [
-    "pyclassifiers",
-]
 install_requires = [
     "pypipegzip",
     "pylzma",
@@ -13,6 +10,7 @@ make_requires = [
     "pymakehelper",
 ]
 test_requires = [
+    "pyclassifiers",
     "pylint",
     "pytest",
     "pytest-cov",
