@@ -3,13 +3,3 @@
 pypipegzip
 pylzma
 typing
-# dev requirements
-pypitools
-# test requirements
-pyclassifiers
-pylint
-pytest
-pytest-cov
-pyflakes
-flake8
-mypy
