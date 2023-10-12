@@ -12,7 +12,7 @@ version: 0.0.19
 
 ## github
 
-![License](https://img.shields.io/github/license/veltzer/pytconf)
+![License](https://img.shields.io/github/license/veltzer/pyanyzip)
 
 ## build
 
