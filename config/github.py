@@ -5,10 +5,8 @@ if pydmt.helpers.project.get_name().startswith("py"):
         ("ubuntu-22.04", "3.12"),
         ("ubuntu-22.04", "3.11"),
         ("ubuntu-22.04", "3.10"),
-        ("ubuntu-20.04", "3.9"),
-        ("ubuntu-20.04", "3.8"),
     ]
 else:
     workflows_platforms = [
-        ("ubuntu-22.04", "3.10"),
+        ("ubuntu-22.04", "3.11"),
     ]
