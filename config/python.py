@@ -1,9 +1,13 @@
 from typing import List
 
 
-config_requires: List[str] = []
 dev_requires: List[str] = [
+    "pymultigit",
     "pypitools",
+    "black",
+]
+config_requires: List[str] = [
+    "pyclassifiers",
 ]
 install_requires: List[str] = [
     "pypipegzip",
