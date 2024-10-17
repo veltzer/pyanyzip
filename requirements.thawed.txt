@@ -1,7 +1,6 @@
 # THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
 pyclassifiers
 pypipegzip
-pylzma
 typing
 pymakehelper
 pydmt

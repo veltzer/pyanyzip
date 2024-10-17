@@ -1,7 +1,6 @@
 from typing import Union
 
 import io
-import lzma
 import bz2
 
 from pypipegzip import pypipegzip
@@ -46,8 +45,6 @@ def openzip(name: str, mode: str, method: str = 'suffix', zip_type: Union[str, N
         return io.open(name, mode=mode, newline=newline)
     if type == "gzip":
         return pypipegzip.zipopen(filename=name, mode=mode, newline=newline)
-    if type == "xz":
-        return lzma.open(filename=name, mode=mode, newline=newline)
     if type == "bzip2":
         return bz2.open(filename=name, mode=mode, newline=newline)
     raise ValueError("You should not be here")

@@ -10,7 +10,6 @@ config_requires: List[str] = [
 ]
 install_requires: List[str] = [
     "pypipegzip",
-    "pylzma",
     "typing",
 ]
 build_requires: List[str] = [

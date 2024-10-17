@@ -35,7 +35,6 @@ setuptools.setup(
     ],
     install_requires=[
         "pypipegzip",
-        "pylzma",
         "typing",
     ],
     classifiers=[
