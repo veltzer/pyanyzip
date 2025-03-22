@@ -1,3 +1,7 @@
+"""
+Core functionality of pyanyzip
+"""
+
 from typing import Union
 
 import io
