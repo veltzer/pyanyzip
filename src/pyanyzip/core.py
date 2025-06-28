@@ -37,8 +37,8 @@ def _get_type(name, method):
     raise ValueError("method not supported")
 
 
-def openzip(name: str, mode: str, method: str = 'suffix', zip_type: Union[str, None] = None,
-            newline: Union[str, None] = None):
+def openzip(name: str, mode: str, method: str = 'suffix', zip_type: str | None = None,
+            newline: str | None = None):
     assert method in methods
     if zip_type is None:
         zip_type = _get_type(name, method)
@@ -46,7 +46,7 @@ def openzip(name: str, mode: str, method: str = 'suffix', zip_type: Union[str, N
         assert zip_type in zip_types
     if zip_type == 'plain':
         # pylint: disable=consider-using-with
-        return io.open(name, mode=mode, newline=newline)
+        return open(name, mode=mode, newline=newline)
     if type == "gzip":
         return pypipegzip.zipopen(filename=name, mode=mode, newline=newline)
     if type == "bzip2":
