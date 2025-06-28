@@ -2,9 +2,6 @@
 Core functionality of pyanyzip
 """
 
-from typing import Union
-
-import io
 import bz2
 
 from pypipegzip import pypipegzip

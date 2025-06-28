@@ -7,6 +7,4 @@ pydmt
 pylint
 pytest
 pytest-cov
-pyflakes
-flake8
 mypy
