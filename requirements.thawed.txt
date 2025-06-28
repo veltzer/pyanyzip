@@ -1,10 +1,11 @@
 # THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
+mypy
 pyclassifiers
-pypipegzip
-typing
-pymakehelper
 pydmt
 pylint
+pymakehelper
+pypipegzip
 pytest
 pytest-cov
-mypy
+ruff
+typing
