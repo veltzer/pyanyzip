@@ -6,6 +6,5 @@ pylint
 pymakehelper
 pypipegzip
 pytest
-pytest-cov
 ruff
 typing
