@@ -8,7 +8,9 @@ install_requires: list[str] = [
     "typing",
 ]
 build_requires: list[str] = [
+    "hatch",
     "pymakehelper",
+    "pycmdtools",
     "pydmt",
 ]
 test_requires: list[str] = [
