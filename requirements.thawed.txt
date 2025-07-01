@@ -9,4 +9,3 @@ pymakehelper
 pypipegzip
 pytest
 ruff
-typing

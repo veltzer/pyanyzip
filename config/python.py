@@ -4,7 +4,6 @@ import config.shared
 
 install_requires: list[str] = [
     "pypipegzip",
-    "typing",
 ]
 build_requires: list[str] = config.shared.PBUILD
 test_requires: list[str] = config.shared.PTEST
