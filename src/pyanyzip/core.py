@@ -21,27 +21,27 @@ zip_types = {
 
 
 def _get_type(name, method):
-    if method == 'suffix':
-        if name.endswith('.gz'):
-            return 'gzip'
-        if name.endswith('.bz2'):
-            return 'bz2'
-        if name.endswith('.xz'):
-            return 'xz'
-        return 'plain'
-    if method == 'magic':
+    if method == "suffix":
+        if name.endswith(".gz"):
+            return "gzip"
+        if name.endswith(".bz2"):
+            return "bz2"
+        if name.endswith(".xz"):
+            return "xz"
+        return "plain"
+    if method == "magic":
         raise ValueError("magic is still not implemented")
     raise ValueError("method not supported")
 
 
-def openzip(name: str, mode: str, method: str = 'suffix', zip_type: str | None = None,
+def openzip(name: str, mode: str, method: str = "suffix", zip_type: str | None = None,
             newline: str | None = None):
     assert method in methods
     if zip_type is None:
         zip_type = _get_type(name, method)
     else:
         assert zip_type in zip_types
-    if zip_type == 'plain':
+    if zip_type == "plain":
         # pylint: disable=consider-using-with
         return open(name, mode=mode, newline=newline)
     if zip_type == "gzip":
