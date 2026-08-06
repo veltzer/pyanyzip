@@ -1,0 +1,23 @@
+version = 1
+revision = 3
+requires-python = ">=3.12"
+
+[[package]]
+name = "pyanyzip"
+version = "0.0.24"
+source = { editable = "." }
+dependencies = [
+    { name = "pypipegzip" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pypipegzip" }]
+
+[[package]]
+name = "pypipegzip"
+version = "0.0.24"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/42/cc/5755295a400b56512b3e17633fac7f68de423755211ed7b85e07a6fa00b6/pypipegzip-0.0.24.tar.gz", hash = "sha256:ef923c80e57617490aef3a3c65222665bab92a435c839dc386e1b39bbf49f2d5", size = 3114, upload-time = "2024-10-12T11:55:37.672Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/af/bd/cf71d41e279876244ef0a09aa3bcf732822b731f01acf7e93a41c9444ea2/pypipegzip-0.0.24-py3-none-any.whl", hash = "sha256:4f530f14803c11e3799d257b0a951b1f17100bb14662e01047c88a68ff05a392", size = 3531, upload-time = "2024-10-12T11:55:36.431Z" },
+]
