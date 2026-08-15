@@ -6,7 +6,6 @@ import bz2
 
 from pypipegzip import pypipegzip
 
-
 methods = {
     "magic",
     "suffix",
