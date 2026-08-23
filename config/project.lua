@@ -6,3 +6,4 @@ KEYWORDS = {
     "bz2",
     "gzip",
 }
+PYPI = true
