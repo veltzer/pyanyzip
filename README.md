@@ -5,7 +5,7 @@
 
 description: pyanyzip is a module to help with dealing with compressed files transparently
 
-project website: https://veltzer.github.io/pyanyzip
+project website: <https://veltzer.github.io/pyanyzip>
 
 author: Mark Veltzer
 
