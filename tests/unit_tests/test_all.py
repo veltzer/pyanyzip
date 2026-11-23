@@ -3,6 +3,8 @@
 import os
 import unittest
 
+import pytest
+
 import pyanyzip.core
 
 
@@ -12,8 +14,10 @@ class TestAll(unittest.TestCase):
         pass
 
     def test_open_not_exists(self):
-        self.assertRaises(FileNotFoundError, pyanyzip.core.openzip, name="data/doesnt_exist.txt", mode="rt")
+        with pytest.raises(FileNotFoundError):
+            pyanyzip.core.openzip(name="data/doesnt_exist.txt", mode="rt")
 
     def test_open_text_file(self):
         print(os.getcwd())
-        pyanyzip.core.openzip(name="data/text.txt", mode="rt")
+        with pyanyzip.core.openzip(name="data/text.txt", mode="rt") as stream:
+            assert stream.read()

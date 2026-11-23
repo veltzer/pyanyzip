@@ -41,7 +41,6 @@ def openzip(name: str, mode: str, method: str = "suffix", zip_type: str | None =
     else:
         assert zip_type in zip_types
     if zip_type == "plain":
-        # pylint: disable=consider-using-with
         return open(name, mode=mode, newline=newline)
     if zip_type == "gzip":
         return pypipegzip.zipopen(filename=name, mode=mode, newline=newline)
