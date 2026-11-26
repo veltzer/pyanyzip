@@ -314,11 +314,11 @@ wheels = [
 
 [[package]]
 name = "pypipegzip"
-version = "0.0.24"
+version = "0.0.25"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/42/cc/5755295a400b56512b3e17633fac7f68de423755211ed7b85e07a6fa00b6/pypipegzip-0.0.24.tar.gz", hash = "sha256:ef923c80e57617490aef3a3c65222665bab92a435c839dc386e1b39bbf49f2d5", size = 3114, upload-time = "2024-10-12T11:55:37.672Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/89/35/0e20ad7a3c1265346c29c951693a061764caf8501d6d23b2cd224cb349de/pypipegzip-0.0.25.tar.gz", hash = "sha256:5c91585f66fc67dd362441567ce937a51ca2e6f4159b2d0b6510e4176f8cf32b", size = 5399, upload-time = "2026-11-26T17:04:22.776Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/af/bd/cf71d41e279876244ef0a09aa3bcf732822b731f01acf7e93a41c9444ea2/pypipegzip-0.0.24-py3-none-any.whl", hash = "sha256:4f530f14803c11e3799d257b0a951b1f17100bb14662e01047c88a68ff05a392", size = 3531, upload-time = "2024-10-12T11:55:36.431Z" },
+    { url = "https://files.pythonhosted.org/packages/e7/c2/c9ce38ac3b49bd8cc873687cef72cb232751ee2ea8d1798ac4250678b611/pypipegzip-0.0.25-py3-none-any.whl", hash = "sha256:dfe6e54708519cbaa4c35820223be6417d833375dbfcdd5842614006c2f85a4b", size = 3846, upload-time = "2026-11-26T17:04:21.749Z" },
 ]
 
 [[package]]

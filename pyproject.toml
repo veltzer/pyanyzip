@@ -88,11 +88,6 @@ search-path = [
     "src",
     ".",
 ]
-# Third-party libraries without type information.
-ignore-missing-imports = [
-    "pyanyzip.*",
-    "pypipegzip.*",
-]
 
 [tool.pyrefly.errors]
 no-any-return = "error"
