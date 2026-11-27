@@ -19,7 +19,7 @@ zip_types = {
 }
 
 
-def _get_type(name, method):
+def _get_type(name: str, method: str):
     if method == "suffix":
         if name.endswith(".gz"):
             return "gzip"
